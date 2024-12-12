@@ -26,7 +26,6 @@ dict = {
 }
 
 df_3['customer_id'] = df_3['customer_id'].replace(dict)
-df_3
 
 ### Etapa 2
 import pandas_gbq
