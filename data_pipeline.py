@@ -62,5 +62,4 @@ table_customers_name = "dataset_teste.customers"
 pandas_gbq.to_gbq(df_3, table_customers_name, 
                   project_id='teste-eng-dados',
                   if_exists='replace',
-                  credentials = credentials,
-                  table_schema=schema)
+                  credentials = credentials)
