@@ -20,12 +20,14 @@ ORDER BY month;
 
 SELECT
 
-  customer_id
+  customer_name
   ,COUNT(*) total_transactions
 
-FROM `teste-eng-dados.dataset_teste.transactions`
+FROM `teste-eng-dados.dataset_teste.transactions` tr
+,`teste-eng-dados.dataset_teste.customers` c
 
 WHERE 1=1
+  AND tr.customer_id = c.customer_id
   AND transaction_status = "approved"
   AND transaction_date BETWEEN "2023-10-01" AND "2023-12-31"
 
